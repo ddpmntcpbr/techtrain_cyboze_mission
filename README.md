@@ -4,12 +4,12 @@
 https://companyshareapp.firebaseapp.com/
 
 ## コンセプト
-TechTrainが提供するサイボウズのMISSION『就活に便利！会社情報をみんなで共有しよう』の
+TechTrainが提供するサイボウズのMISSION『就活に便利！会社情報をみんなで共有しよう』の  
 制作物(https://techbowl.co.jp/techtrain/mypage/missions/3)
 
 ## 詳細
-Vue.js と Firebase を組み合わせた会社情報共有アプリ
-『Vue.jsとFirebaseで、noteライクなSNSアプリを5時間で作ろう！』を
+Vue.js と Firebase を組み合わせた会社情報共有アプリ  
+『Vue.jsとFirebaseで、noteライクなSNSアプリを5時間で作ろう！』を  
 参考に作成 (https://note.mu/kyo_game_theory/n/n6a90113a2f98)
 
 ## 技術スタック
