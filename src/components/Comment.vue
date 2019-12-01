@@ -1,8 +1,5 @@
 <template>
   <div class="list-none my-8">
-    <router-link :to=" '/post/' + user.id + '/' + post.id">
-      <h2 class="text-xl">{{ post.title }}</h2>
-    </router-link>
     <div class="flex mt-2">
       <div 
         class="w-10 h-10 bg-cover bg-center rounded-full border border-black mr-2"
@@ -10,7 +7,8 @@
       ></div>
       <div>
         <p>{{ user.displayName }}</p>
-        <p class="text-xs">{{ post.createdAt }}</p>
+        <p class="text-xs">{{ comment.createdAt }}</p>
+        <p>{{ comment.content }}</p>
       </div>
     </div>
   </div>
@@ -20,16 +18,18 @@
 <script>
 import { db } from '@/main'
 export default {
-  props: ['post'],
+  props: ['comment'],
   data() {
     return {
-      user: {}
+      user: {},
     }
   },
+
   firestore() {
     return {
-      user: db.collection('users').doc(this.$props.post.uid)
+      user: db.collection('users').doc(this.$props.comment.uid)
     }
-  }
+  },
+
 }
 </script>
