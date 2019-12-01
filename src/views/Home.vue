@@ -1,6 +1,6 @@
 <template>
  <div class="home">
-
+   
    <Item v-for="post in posts"
      :key="post.id"
      :post="post"

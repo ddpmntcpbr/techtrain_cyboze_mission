@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-full p-3 bg-gray-400">
+  <header class="fixed top-0 w-full p-3 bg-gray-300">
     <div class="flex justify-between">
       <router-link to="/">
         <h1 class="text-3xl font-bold">Company Share App</h1>
@@ -11,7 +11,7 @@
 
         <router-link to="/create">
           <button 
-            class="mt-2 mr-5 focus:outline-none"
+            class="mt-2 mr-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
           >Write</button>
         </router-link>
 
@@ -22,14 +22,14 @@
         <div>
           <p>{{ currentUser.displayName }}</p>
           <p 
-            class="-mt-1 text-sm cursor-pointer"
+            class="mt-1 text-sm cursor-pointer bg-blue-500 hover:bg-blue-700 text-white px-1 border border-blue-700 rounded"
             @click="signOut"
           >Log Out</p>
         </div>
       </div>
       <div v-else>
         <button 
-          class="cursor-pointer focus:outline-none"
+          class="cursor-pointer focus:outline-none bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 border border-blue-700 rounded"
           @click="signIn"
         >Sign In</button>
       </div>

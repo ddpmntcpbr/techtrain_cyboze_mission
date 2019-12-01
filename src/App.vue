@@ -6,15 +6,19 @@
    <main class="my-20 mx-auto">
      <router-view/>
    </main>
+
+   <Footer />
  </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 export default {
 
  components: {
-   Header
+   Header,
+   Footer
  }
 }
 </script>
@@ -23,6 +27,4 @@ export default {
 
 main
   width: 95%
-  max-width: 500px
-
 </style>

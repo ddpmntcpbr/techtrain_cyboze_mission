@@ -1,51 +1,55 @@
 <template>
   <div>
     <h2 class="text-center text-3xl">{{ post.title }}</h2>
-    <div class="flex justify-center">
-      <li 
-        v-for="(tag,idx) in post.tags"
-        :key="idx"
-        class="list-none m-1 border border-black p-1 px-3 rounded-full text-xs"
-      >
-        {{ tag }}
-      </li>
-    </div>
+    
     <div 
       v-if="post.image"
       class="w-full h-64 bg-cover bg-center my-8"
       :style=" 'background-image: url(' + post.image + ')' "
     ></div>
-    <div class="flex mb-8">
-      <div 
-        class="w-10 h-10 rounded-full bg-cover bg-center mr-2 border border-black"
-        :style=" 'background-image: url(' + user.photoURL + ')' "
+    <div class="border border-black p-5 mb-5">
+      <div class="flex mb-8">
+        <div 
+          class="w-10 h-10 rounded-full bg-cover bg-center mr-2 border border-black"
+          :style=" 'background-image: url(' + user.photoURL + ')' "
+        ></div>
+
+      
+        <div>
+          <p>{{ user.displayName }}</p>
+          <p class="text-xs">{{ post.createdAt }}</p>
+        </div>
+
+        <div 
+          v-if="currentUser && currentUser.uid === user.id"
+          class="ml-5"
+        >
+          <router-link :to=" '/update/' + post.id ">
+            <button class="mx-2 mt-2 focus:outline-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">edit</button>
+          </router-link> 
+
+          <button 
+            @click="remove"
+            class="mx-2 mt-2 focus:outline-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >delete</button>
+
+        </div>
+        <div 
+          v-else
+          class="ml-5"
+        >
+          <button class="mx-2 mt-2 focus:outline-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">edit</button>
+          <button class="mx-2 mt-2 focus:outline-none bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">delete</button>
+        
+        </div>
+
+      </div>
+      <div
+        class="text-sm leading-loose content"
+        v-html="post.content"
       ></div>
-
-
-      <div>
-        <p>{{ user.displayName }}</p>
-        <p class="text-xs">{{ post.createdAt }}</p>
-      </div>
-
-      <div 
-        v-if="currentUser && currentUser.uid === user.id"
-        class="ml-5"
-      >
-        <router-link :to=" '/update/' + post.id ">
-          <button class="mx-2 mt-2 focus:outline-none">edit</button>
-        </router-link> 
-
-        <button 
-          @click="remove"
-          class="mx-2 mt-2 focus:outline-none"
-        >delete</button>
-
-      </div>
     </div>
-    <div
-      class="text-sm leading-loose content"
-      v-html="post.content"
-    ></div>
+
 
     <h3 class="text-center text-3xl">コメント</h3>
 
