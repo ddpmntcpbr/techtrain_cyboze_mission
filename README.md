@@ -1,7 +1,7 @@
 # company-share-appについて
 
 ## URL
-https://companyshareapp.firebaseapp.com/
+https://companyshareapp.web.app/
 
 ## コンセプト
 TechTrainが提供するサイボウズのMISSION『就活に便利！会社情報をみんなで共有しよう』の  
