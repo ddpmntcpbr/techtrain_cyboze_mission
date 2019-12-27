@@ -1,5 +1,5 @@
 <template>
-  <div class="list-none my-8 hover:bg-gray-200 border border-gray-300 rounded shadow-md">
+  <div class="flex list-none my-8 hover:bg-gray-200 border border-gray-300 rounded shadow-md">
     <router-link :to=" '/post/' + user.id + '/' + post.id">
       <div class="py-2 px-4">
         <h2 class="text-xl">{{ post.title }}</h2>  

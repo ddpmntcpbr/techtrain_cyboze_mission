@@ -2,7 +2,7 @@
   <header class="fixed top-0 w-full p-3 bg-gray-300">
     <div class="flex justify-between">
       <router-link to="/">
-        <h1 class="text-3xl font-bold">Company Share App</h1>
+        <h1 class="text-2xl font-bold">Company Share App</h1>
       </router-link>
       <div 
         v-if="currentUser"

@@ -4,7 +4,7 @@
     
     <div 
       v-if="post.image"
-      class="w-full h-64 bg-cover bg-center my-8"
+      class="w-64 h-64 bg-cover bg-center my-8"
       :style=" 'background-image: url(' + post.image + ')' "
     ></div>
     <div class="border border-black p-5 mb-5">
