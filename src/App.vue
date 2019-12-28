@@ -1,30 +1,25 @@
 <template>
  <div id="app">
 
-   <Header />
+    <Sidebar class="w-64"/>
 
-   <main class="my-20 mx-auto">
-     <router-view/>
-   </main>
-
-   <Footer />
+    <main class="ml-64">
+      <router-view/>
+    </main>
  </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Sidebar from '@/components/Sidebar'
 export default {
 
  components: {
-   Header,
-   Footer
+   Sidebar
  }
 }
 </script>
 
 <style lang="stylus">
-
 main
-  width: 95%
+  width:50%
 </style>

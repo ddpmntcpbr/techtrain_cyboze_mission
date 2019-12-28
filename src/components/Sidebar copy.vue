@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-full p-3 bg-gray-300">
+  <div class="fixed top-0 w-full p-3 bg-gray-300">
     <div class="flex justify-between">
       <router-link to="/">
         <h1 class="text-2xl font-bold">Share!</h1>
@@ -34,7 +34,7 @@
         >Sign In</button>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -59,13 +59,11 @@ export default {
       .then((result) => {
         alert('Hello, '+result.user.displayName+'!'),
 
-        // ここから追加
         db.collection('users').doc(result.user.uid).set({
           displayName: result.user.displayName,
           photoURL: result.user.photoURL,
           email: result.user.email
         })
-        // ここまで追加
 
       })
     },

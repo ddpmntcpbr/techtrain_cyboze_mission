@@ -1,10 +1,8 @@
 <template>
- <div class="home">
-   
+ <div class="home bg-green-100">
    <Item v-for="post in posts"
      :key="post.id"
      :post="post"
-     class="list-none my-5"
    />
 
  </div>
